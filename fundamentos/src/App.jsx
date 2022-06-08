@@ -7,6 +7,7 @@ import Aleatorio from './components/basicos/Aleatorio'
 import Primeiro from './components/basicos/Primeiro'
 import ComParametro from './components/basicos/ComParametro'
 import Fragmento from './components/basicos/Fragmento'
+import Familia from './components/basicos/Familia'
 
 
 export default _ =>
@@ -14,28 +15,33 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className='Cards'>
-            <Card titulo="Exemplo de Card">
+
+            <Card titulo="Filhos" color="#00FF00">
+                <Familia></Familia>
+            </Card>
+
+            <Card titulo="Exemplo de Card" color="#080">
                 <Aleatorio min={1} max={60} />
             </Card>
 
             
-            <Card titulo="Fragmento">
+            <Card titulo="Fragmento" color="#21FF6F">
             <Fragmento />
             </Card>
     
             
-            <Card titulo="Com Parametro">
+            <Card titulo="Com Parametro" color="#E1B71A">
             <ComParametro
                 titulo="Banco de dados"
                 aluno=" Mouta "
-                nota=" 9.3" />
+                nota={9.3} />
             <ComParametro
                 titulo="Teoria de Grafos"
                 aluno=" Mouta "
-                nota=" 5.9" />
+                nota={5.9} />
             </Card>
 
-            <Card titulo="Primeiro">
+            <Card titulo="Primeiro" color="#588C73">
             <Primeiro></Primeiro>
             </Card>
         </div>
