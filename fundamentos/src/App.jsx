@@ -2,6 +2,7 @@ import './App.css'
 import './components/layout/Card.css'
 import React from 'react'
 
+import ParOuImpar from './components/condicional/ParOuImpar'
 import Card from './components/layout/Card'
 import Aleatorio from './components/basicos/Aleatorio'
 import Primeiro from './components/basicos/Primeiro'
@@ -10,6 +11,7 @@ import Fragmento from './components/basicos/Fragmento'
 import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
 
 
 export default _ =>
@@ -17,6 +19,14 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className='Cards'>
+
+        <Card titulo="Renderização" color="#00ff9F">
+                <ParOuImpar>numero={20}</ParOuImpar>
+            </Card>
+
+        <Card titulo="Desafio Repetição" color="#004F2F">
+                <TabelaProdutos></TabelaProdutos>
+            </Card>
 
             <Card titulo="Lista" color="#004F2F">
                 <ListaAlunos></ListaAlunos>
