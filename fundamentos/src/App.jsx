@@ -3,6 +3,7 @@ import './components/layout/Card.css'
 import React from 'react'
 
 
+import Contador from './components/contador/Contador'
 import IndiretaPai from './components/comunicao/IndiretaPai'
 import DiretaPai from './components/comunicao/DiretaPai'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
@@ -16,6 +17,8 @@ import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
+import Input from './components/formulário/input'
+
 
 
 export default _ =>
@@ -24,7 +27,13 @@ export default _ =>
 
         <div className='Cards'>
 
-                      
+        <Card titulo="Contador" color="#107F94">
+            <Contador numeroInicial={20}></Contador>                
+        </Card> 
+
+        <Card titulo="Componente Controlado (Input)" color="#AFA577">
+            <Input></Input>                
+        </Card>              
 
         <Card titulo="Comunicação Indireta" color="#8DAD39">
                <IndiretaPai></IndiretaPai>
