@@ -18,7 +18,7 @@ import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import Input from './components/formulário/input'
-
+import Mega from './components/mega/Mega'
 
 
 export default _ =>
@@ -26,6 +26,11 @@ export default _ =>
         <h1>Fundamentos React</h1>
 
         <div className='Cards'>
+
+        <Card titulo="Mega" color="#C4D4AF">
+           <Mega></Mega>   
+        </Card> 
+    
 
         <Card titulo="Contador" color="#107F94">
             <Contador numeroInicial={20}></Contador>                

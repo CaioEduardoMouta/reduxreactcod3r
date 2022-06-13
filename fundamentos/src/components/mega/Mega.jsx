@@ -1,3 +1,4 @@
+import './Mega.css';
 import React, {useState} from 'react';
 
 
@@ -9,26 +10,39 @@ export default props => {
             aleatorio
     }
 
-    function gerarNumero(qtde) {
-        const numeros = array(qtde)
+    function gerarNumeros(qtde) {
+        const numeros = Array(qtde)
         .fill(0)
         .reduce((nums) => {
             const novoNumero = gerarNumeroNaoContido(1, 60, nums)
             return [ ...nums, novoNumero]
         },[])
 
-        .sort((n1, n2) => n1 - n2)
+        .sort((n1, n2) => n1 - n2);
 
-        return numeros
+        return numeros;
     }
 
-    const numerosIniciais = Array(props.qtde || 6).fill 
-    const [numeros, setNumeros] = useState(Array(props.qtde).fill(0))
-
+    const [qtde, setQtde] = useState(props.qtde || 6)
+    const numerosIniciais = gerarNumeros(qtde)
+    const [numeros, setNumeros] = useState(numerosIniciais)
+    
+    
     return (
-            <div>
+            <div className='Mega'>
                 <h2>Mega</h2>
-                <h3>{numeros}</h3>
+                <h3>{numeros.join('  ')}</h3>
+                <div>
+                    <label>Qtde de Números</label>
+                    <input type="number" value={qtde}
+                    onChange={(e) => {
+                        setQtde(+e.target.value)
+                        setNumeros(gerarNumeros(+e.target.value))
+                    }} />
+                </div>
+                <button onClick={(_) => setNumeros(gerarNumeros)}>
+                     Gerar Numeros
+                </button>
             </div>
     );
     
