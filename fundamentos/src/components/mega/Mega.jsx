@@ -29,18 +29,22 @@ export default props => {
     
     
     return (
-            <div className='Mega'>
+            <div className="Mega">
                 <h2>Mega</h2>
                 <h3>{numeros.join('  ')}</h3>
                 <div>
                     <label>Qtde de Números</label>
-                    <input type="number" value={qtde}
+                    <input
+                    min="6"
+                    max="15" 
+                    type="number" 
+                    value={qtde}
                     onChange={(e) => {
                         setQtde(+e.target.value)
                         setNumeros(gerarNumeros(+e.target.value))
                     }} />
-                </div>
-                <button onClick={(_) => setNumeros(gerarNumeros)}>
+                </div>                                                                     
+                <button onClick={(_) => setNumeros(gerarNumeros(qtde))}>
                      Gerar Numeros
                 </button>
             </div>
