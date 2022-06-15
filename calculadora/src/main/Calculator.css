@@ -2,6 +2,8 @@
     height: 320px;
     width: 235px;
     border-radius: 5px;
-    overflow: hidden;
+    /*overflow: hidden;/8
     background-color: red;
+
+    display: grid;
 }
