@@ -6,7 +6,12 @@ const Menu = props => (
          <nav>
             <ul>
                 <li>
-                   <a href="/"></a> 
+                   <a href="/">Inicio</a> 
+                </li>
+            </ul>
+            <ul>
+                <li>
+                   <a href="/">Sobre</a> 
                 </li>
             </ul>
          </nav>
