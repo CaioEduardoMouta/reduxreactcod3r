@@ -1,17 +1,31 @@
 import './Menu.css'
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 const Menu = props => (
     <aside className="Menu">
          <nav>
             <ul>
                 <li>
-                   <a href="/">Inicio</a> 
+                   <Link to="/">Inicio</Link> 
                 </li>
-            </ul>
-            <ul>
+
                 <li>
-                   <a href="/">Sobre</a> 
+                   <Link to="/param/300121">Param #01</Link> 
+                </li>
+
+                <li>
+                   <Link to="/param/legal">Param #02</Link> 
+                </li>
+                
+           
+                <li>
+                <Link to="/about">Sobre</Link>  
+                </li>
+
+                <li>
+                <Link to="/naoexiste">Não Existe</Link>  
                 </li>
             </ul>
          </nav>
