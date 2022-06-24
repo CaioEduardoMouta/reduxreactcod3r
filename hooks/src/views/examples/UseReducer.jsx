@@ -40,7 +40,7 @@ const UseReducer = (props) => {
                     <button className="btn"
                     onClick={() => dispatch({type: 'numberAddN', payload: -9})}>-9</button>
 
-<button className="btn"
+                    <button className="btn"
                     onClick={() => dispatch({type: 'numberAddN', payload: +11})}>+11</button>
                 </div>
             </div>
