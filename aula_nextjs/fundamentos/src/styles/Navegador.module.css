@@ -1,7 +1,8 @@
 .navegador {
    
-    color: gray;
+    color: rgb(240, 220, 220);
     padding: 30px;
     margin: 10px;
     border-radius: 8px;
+    cursor: pointer;
 }
