@@ -1,3 +1,5 @@
+import Layout from "../components/Layout"
+
 export default function Jsx() {
     const a = 4
     const b = 3
@@ -10,6 +12,7 @@ export default function Jsx() {
 
     
     return (
+        <Layout titulo="Lorem Ipsum">
         <div>
             {titulo}
             {subtitulo()}
@@ -20,5 +23,6 @@ export default function Jsx() {
             </p>
             {a * b}
         </div>
+        </Layout>
     )
 }
