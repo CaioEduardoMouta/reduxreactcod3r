@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import Tabela from "../components/tabela";
+import Tabela from "../components/Tabela";
 import Cliente from "../core/Cliente";
 
 export default function Home() {
