@@ -3,7 +3,7 @@ interface EntradaProps {
     texto: string
     valor: any
     somenteLeitura?: boolean
-    className: string
+    className?: string
     valorMudou?: (valor: any) => void
 }
 
