@@ -1,46 +1,24 @@
-import { useState } from "react";
+
 import Botao from "../components/Botao";
 import Formulario from "../components/Formulario";
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
-import Cliente from "../core/Cliente";
+import useClientes from "../hooks/useClientes";
+import useTabelaOuForm from "../hooks/useTabelaOuForm";
 
 export default function Home() {
 
-  const [cliente, setCliente] = useState<Cliente>(Cliente.vazio())
-  const [visivel, setVisivel] = useState<'tabela' | 'form'>('tabela')
+  const { 
+    cliente,
+    clientes,
+    novoCliente,
+    clienteSelecionado, 
+    excluirCliente,
+    exibirTabela,
+    salvarCliente,
+    tabelaVisivel } = useClientes()
 
-  const clientes = [
-    new Cliente('Lorem', 31, '1'),
-    new Cliente('Ipsum', 33, '1'),
-    new Cliente('Dolor', 22, '1'),
-    new Cliente('Sit', 54, '1'),
-
-  ]
-
-  function clienteSelecionado(cliente: Cliente) {
-        setCliente(cliente)
-        setVisivel('form')
-  }
-
- 
-
-  function clienteExcluido (cliente: Cliente) {
-    
-  }
-
-  function novoCliente() {
-    setCliente(Cliente.vazio())
-    setVisivel('form')
-}
-
-  
-  function salvarCliente(cliente: Cliente) {
-      setVisivel('tabela')
-  }
-
-  
-
+   
   return (
     <div className={`
       flex justify-center items-center h-screen
@@ -48,7 +26,7 @@ export default function Home() {
       text-white
     `}>
       <Layout titulo="Cadastro Simples">
-      {visivel === 'tabela' ? (
+      {tabelaVisivel   ? (
         <>
           <div className="flex justify-end">
           <Botao cor="green" className="mb-4" 
@@ -58,14 +36,14 @@ export default function Home() {
           </div>
           <Tabela clientes={clientes} 
           clienteSelecionado={clienteSelecionado}
-          clienteExcluido={clienteExcluido}       
+          clienteExcluido={excluirCliente}       
           />
         </>
       ) : (
         <Formulario 
         cliente={cliente} 
         clienteMudou={salvarCliente}
-        cancelado={() => setVisivel('tabela')}
+        cancelado={exibirTabela}
         />
       )}
       

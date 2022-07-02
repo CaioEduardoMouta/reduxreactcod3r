@@ -16,6 +16,7 @@ export default function Formulario(props: FormularioProps){
     
     return (
         <div>
+            <div>
             {id ? (
                 <Entrada 
                     somenteLeitura
@@ -24,7 +25,7 @@ export default function Formulario(props: FormularioProps){
                     className="mb-5"
                 />
             ): false}
-
+            </div>
                 <Entrada 
                     texto="Nome" 
                     valor={nome} 

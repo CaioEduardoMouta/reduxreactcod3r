@@ -1,12 +1,11 @@
-import firebase from "firebase;
-import 'firevase/firestore'
+import firebase from "firebase";
+import 'firebase/firestore'
 
-if(firebase.apps.length) {
+if (!firebase.apps.length) {
     firebase.initializeApp({
-        apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-        authDomain:process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-        projectd:process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-
+        apiKey: "AIzaSyAvf3dkfQ7GmPaaZRuXqpj0xA6K3I2TM_g",
+        authDomain: "next-crud-48414.firebaseapp.com",
+        projectId: "next-crud-48414",
     })
 }
 
