@@ -5,7 +5,7 @@ export default props => (
         <strong>
             Copyright &copy; 2022
             <a href='http://cod3r.com.br' 
-                target='_blank'> Cod3r</a>
+                target='_blank'> Cod3r</a>.
         </strong>
     </footer>
 )
