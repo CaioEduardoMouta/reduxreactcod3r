@@ -30,6 +30,12 @@
     "webpack-dev-server": "1.16.2"
   },
   "dependencies": {
-    "react-router": "^6.3.0"
+    "lodash": "^4.17.21",
+    "react-redux": "^8.0.2",
+    "react-router": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-multi": "^0.1.12",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.4.1"
   }
 }
