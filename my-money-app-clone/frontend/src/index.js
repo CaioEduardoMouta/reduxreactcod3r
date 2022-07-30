@@ -6,9 +6,10 @@ import { Provider } from 'react-redux'
 import promise from 'redux-promise'
 import multi from 'redux-multi'
 import thunk from 'redux-thunk'
-
+import App from './main/app'
 import Routes from './main/routes'
 import reducers from './main/reducers'
+import registerServiceWork from './registerServiceWork'
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ 
       && window.__REDUX_DEVTOOLS_EXTENSION__()
@@ -18,3 +19,5 @@ ReactDOM.render(
         <Routes />
     </Provider>
 , document.getElementById('app'))
+
+registerServiceWork()
