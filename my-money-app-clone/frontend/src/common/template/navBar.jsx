@@ -50,4 +50,4 @@ class NavBar extends Component {
 
 const mapStateToProps = state => ({user: state.auth.user})
 const mapDispatchToProps = dispatch => bindActionCreators({ logout }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar)
